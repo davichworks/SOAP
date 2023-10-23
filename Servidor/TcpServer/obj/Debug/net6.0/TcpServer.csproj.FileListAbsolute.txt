@@ -1,0 +1,14 @@
+C:\Users\david.perez1\source\repos\SOAP\Servidor\TcpServer\bin\Debug\net6.0\TcpServer.exe
+C:\Users\david.perez1\source\repos\SOAP\Servidor\TcpServer\bin\Debug\net6.0\TcpServer.deps.json
+C:\Users\david.perez1\source\repos\SOAP\Servidor\TcpServer\bin\Debug\net6.0\TcpServer.runtimeconfig.json
+C:\Users\david.perez1\source\repos\SOAP\Servidor\TcpServer\bin\Debug\net6.0\TcpServer.dll
+C:\Users\david.perez1\source\repos\SOAP\Servidor\TcpServer\bin\Debug\net6.0\TcpServer.pdb
+C:\Users\david.perez1\source\repos\SOAP\Servidor\TcpServer\obj\Debug\net6.0\TcpServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\david.perez1\source\repos\SOAP\Servidor\TcpServer\obj\Debug\net6.0\TcpServer.AssemblyInfoInputs.cache
+C:\Users\david.perez1\source\repos\SOAP\Servidor\TcpServer\obj\Debug\net6.0\TcpServer.AssemblyInfo.cs
+C:\Users\david.perez1\source\repos\SOAP\Servidor\TcpServer\obj\Debug\net6.0\TcpServer.csproj.CoreCompileInputs.cache
+C:\Users\david.perez1\source\repos\SOAP\Servidor\TcpServer\obj\Debug\net6.0\TcpServer.dll
+C:\Users\david.perez1\source\repos\SOAP\Servidor\TcpServer\obj\Debug\net6.0\refint\TcpServer.dll
+C:\Users\david.perez1\source\repos\SOAP\Servidor\TcpServer\obj\Debug\net6.0\TcpServer.pdb
+C:\Users\david.perez1\source\repos\SOAP\Servidor\TcpServer\obj\Debug\net6.0\TcpServer.genruntimeconfig.cache
+C:\Users\david.perez1\source\repos\SOAP\Servidor\TcpServer\obj\Debug\net6.0\ref\TcpServer.dll
