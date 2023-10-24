@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Reflection;
 using System.Text;
+using System.Xml.Linq;
 
 namespace TcpServer
 {
@@ -34,24 +35,46 @@ namespace TcpServer
             using (client)
             using (NetworkStream stream = client.GetStream())
             using (StreamReader reader = new StreamReader(stream, Encoding.UTF8))
+            
             {
-                String message = reader.ReadLine();
+                String message = reader.ReadToEnd();
                 Console.WriteLine($"Mensaje recibido: {message}");
-                string numeroAConvertir;
-                var tipoConversion =
-                        XmlConverter.ProcesarXmlConvertRequest(message, out numeroAConvertir);
-                if (tipoConversion == ConversorEurUsdConstants.Euro)
-                    
-
-                    message = XmlConverter.GenerarPaqueteXmlConvertResponse("", "");
-                else if (tipoConversion == ConversorEurUsdConstants.Dolar)
-                    //Hacer conversión
-                    message = XmlConverter.GenerarPaqueteXmlConvertResponse("", "");
-                else
-                    message = XmlConverter.GenerarPaqueteXmlConvertResponseError(
-                    "ERROR: Divisa no reconocida " + tipoConversion);
-
+                double resultado = RealizarOperacion(message);
+                Console.WriteLine("El resultado es"+resultado);
+                Task.Run(() => HandleConnection2(client,resultado));
+              
+                        
             }
+        }
+
+        private static void HandleConnection2(TcpClient client, double resultado)
+        {
+            using(client)
+            using(NetworkStream stream = client.GetStream())
+            using(StreamWriter writer = new StreamWriter(stream, Encoding.UTF8))
+            {
+                writer.WriteLine(resultado);
+                writer.Flush();
+            }
+        }
+
+        private static double RealizarOperacion(string datos)
+        {
+            XElement xml = XElement.Parse(datos);
+
+            string ud= xml.Element("ud")?.Value;
+            string actual = xml.Element("actual")?.Value;
+            string cambiar = xml.Element("cambiar")?.Value;
+
+            if(actual == "EUR" && cambiar == "USD")
+            {
+                return double.Parse(ud)*1.06;
+            }
+            if (actual == "USD" && cambiar == "EUR")
+            {
+                return double.Parse(ud) / 1.06;
+            }
+            return double.Parse(ud);
         }
     }
 }

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\Source\\Repos\\SOAP\\Servidor\\TcpClient\\TcpClient.csproj": {}
+    "C:\\Users\\david.perez1\\Source\\Repos\\SOAP1\\Servidor\\TcpClient\\TcpClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\Source\\Repos\\SOAP\\Servidor\\TcpClient\\TcpClient.csproj": {
+    "C:\\Users\\david.perez1\\Source\\Repos\\SOAP1\\Servidor\\TcpClient\\TcpClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Source\\Repos\\SOAP\\Servidor\\TcpClient\\TcpClient.csproj",
+        "projectUniqueName": "C:\\Users\\david.perez1\\Source\\Repos\\SOAP1\\Servidor\\TcpClient\\TcpClient.csproj",
         "projectName": "TcpClient",
-        "projectPath": "C:\\Users\\admin\\Source\\Repos\\SOAP\\Servidor\\TcpClient\\TcpClient.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Source\\Repos\\SOAP\\Servidor\\TcpClient\\obj\\",
+        "projectPath": "C:\\Users\\david.perez1\\Source\\Repos\\SOAP1\\Servidor\\TcpClient\\TcpClient.csproj",
+        "packagesPath": "C:\\Users\\david.perez1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\david.perez1\\Source\\Repos\\SOAP1\\Servidor\\TcpClient\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\david.perez1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
