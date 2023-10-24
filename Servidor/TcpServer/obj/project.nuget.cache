@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "rgIFr0ptL6hqQiLHNxjCSI4T68Nkph2ZhonkC9Gsitj9yDBMu4VXW+xEncCgLtI6CgKxcIAyY4yqWpxCdYejoQ==",
+  "dgSpecHash": "yg0sTL4tEYzY+nAJXy3IJKHV46Fx3MxCo9rz4ZWobCXjeMobg63BAdkg7V8RguKtewyQWn43plWZrfNAfRz9CQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\david.perez1\\source\\repos\\SOAP\\Servidor\\TcpServer\\TcpServer.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\admin\\Source\\Repos\\SOAP\\Servidor\\TcpServer\\TcpServer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\admin\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\system.configuration.configurationmanager\\7.0.0\\system.configuration.configurationmanager.7.0.0.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\system.security.cryptography.protecteddata\\7.0.0\\system.security.cryptography.protecteddata.7.0.0.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\system.security.permissions\\7.0.0\\system.security.permissions.7.0.0.nupkg.sha512",
+    "C:\\Users\\admin\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

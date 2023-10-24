@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
@@ -12,9 +13,9 @@ namespace TcpServer
         static void Main()
         {
             int port = 12345;
-            IPAddress localAddr = IPAddress.Parse("127.0.0.1");
+            IPAddress localAddr = IPAddress.Parse(ConfigurationManager.AppSettings["host"]);
 
-            TcpListener server = new TcpListener(localAddr, port);
+            TcpListener server = new TcpListener(localAddr, int.Parse(ConfigurationManager.AppSettings["port"].ToString()));
             server.Start();
             Console.WriteLine($"Servidor iniciado en {localAddr}:{port}");
 
@@ -34,8 +35,22 @@ namespace TcpServer
             using (NetworkStream stream = client.GetStream())
             using (StreamReader reader = new StreamReader(stream, Encoding.UTF8))
             {
-                string message = reader.ReadLine();
+                String message = reader.ReadLine();
                 Console.WriteLine($"Mensaje recibido: {message}");
+                string numeroAConvertir;
+                var tipoConversion =
+                        XmlConverter.ProcesarXmlConvertRequest(message, out numeroAConvertir);
+                if (tipoConversion == ConversorEurUsdConstants.Euro)
+                    
+
+                    message = XmlConverter.GenerarPaqueteXmlConvertResponse("", "");
+                else if (tipoConversion == ConversorEurUsdConstants.Dolar)
+                    //Hacer conversión
+                    message = XmlConverter.GenerarPaqueteXmlConvertResponse("", "");
+                else
+                    message = XmlConverter.GenerarPaqueteXmlConvertResponseError(
+                    "ERROR: Divisa no reconocida " + tipoConversion);
+
             }
         }
     }
