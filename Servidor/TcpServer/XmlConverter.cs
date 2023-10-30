@@ -10,6 +10,8 @@ public class XmlConverter
         var fromUnits = doc.SelectSingleNode("//from");
         var toUnits = doc.SelectSingleNode("//to");
         resultado = Convert.ToDecimal(nodeUnits.InnerText);
+        Console.WriteLine(String.Concat(fromUnits.InnerText.ToUpper().Trim(), "-",
+         toUnits.InnerText.ToUpper().Trim()));
         return String.Concat(fromUnits.InnerText.ToUpper().Trim(), "-",
          toUnits.InnerText.ToUpper().Trim());
     }
