@@ -28,7 +28,32 @@ public class XmlConverter
         XmlNode toNode = doc.CreateElement("to");
         toNode.InnerText = finalCurrency;
         responseNode.AppendChild(toNode);
+        XmlNode result = doc.CreateElement("result");
+        result.InnerText = convertirDivisa(finalCurrency,units); ;
+        responseNode.AppendChild(result);   
+        Console.WriteLine(doc.InnerXml);
         return doc.InnerXml;
+        
+    }
+
+    public static string convertirDivisa(string finalcurrency, string units)
+    {
+        string resultado;
+        double resultado1;
+        if (finalcurrency == "EUR")
+        {
+             resultado1 = double.Parse(units)*0.94;
+            return resultado1.ToString();
+        }else if(finalcurrency == "USDT")
+        {
+            resultado1 = double.Parse(units) / 0.94;
+            return resultado1.ToString() ;
+        }
+        else
+        {
+            return units;
+        }
+        
     }
 
     public static string GenerarPaqueteXmlConvertResponseError(string message)
@@ -41,4 +66,4 @@ public class XmlConverter
         doc.AppendChild(responseNode);
         return doc.InnerXml;
     }
-}
+}

@@ -36,12 +36,13 @@ namespace TcpServer
                     Decimal numeroAConvertir;
                     var tipoConversion =
                     XmlConverter.ProcesarXmlConvertRequest(data, out numeroAConvertir);
-                    if (tipoConversion == "")
+                   
+                    if (tipoConversion == "EUR-USDT")
                         //Hacer conversión
-                        data = XmlConverter.GenerarPaqueteXmlConvertResponse("", "");
-                    else if (tipoConversion == "")
+                        data = XmlConverter.GenerarPaqueteXmlConvertResponse("USDT", numeroAConvertir.ToString());
+                    else if (tipoConversion == "USDT-EUR")
                         //Hacer conversión
-                        data = XmlConverter.GenerarPaqueteXmlConvertResponse("", "");
+                        data = XmlConverter.GenerarPaqueteXmlConvertResponse("EUR", numeroAConvertir.ToString());
                     else
                         data = XmlConverter.GenerarPaqueteXmlConvertResponseError(
                         "ERROR: Divisa no reconocida " + tipoConversion);

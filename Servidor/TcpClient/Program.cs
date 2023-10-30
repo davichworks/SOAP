@@ -11,7 +11,7 @@ namespace TcpClientApp
 
         
 
-        static void Connect(String server, String message)
+        static void Connect(String server, String XmlFilePath)
         {
             try
             {
@@ -19,15 +19,18 @@ namespace TcpClientApp
                 // Note, for this client to work you need to have a TcpServer
                 // connected to the same address as specified by the server, port
                 // combination.
+
                 Int32 port = int.Parse(ConfigurationManager.AppSettings["port"].ToString());
                 TcpClient client = new TcpClient(server, port);
                 // Translate the passed message into ASCII and store it as a Byte array.
-                Byte[] data = System.Text.Encoding.ASCII.GetBytes(message);
+
+                string xmlContent = File.ReadAllText(XmlFilePath);
+                Byte[] data = System.Text.Encoding.ASCII.GetBytes(xmlContent);
                 // Get a client stream for reading and writing
                 NetworkStream stream = client.GetStream();
                 // Send the message to the connected TcpServer.
                 stream.Write(data, 0, data.Length);
-                Console.WriteLine("Sent: {0}", message);
+                Console.WriteLine("Sent: {0}", xmlContent);
                 // Receive the TcpServer.response.
                 // Buffer to store the response bytes.
                 data = new Byte[256];
@@ -56,7 +59,7 @@ namespace TcpClientApp
         public static void Main(string[] args)
         {
 
-            Connect("127.0.0.1", "hola");
+            Connect("127.0.0.1", "C:\\Users\\david.perez1\\source\\repos\\SOAP\\Servidor\\TcpClient\\XMLRequest.xml");
         }
     }
 }
